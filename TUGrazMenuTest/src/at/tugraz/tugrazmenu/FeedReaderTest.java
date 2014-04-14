@@ -2,7 +2,7 @@ package at.tugraz.tugrazmenu;
 
 import android.util.Xml;
 import junit.framework.TestCase;
-import org.junit.Assert;
+import junit.framework.Assert;
 
 import java.io.File;
 import java.net.URL;
