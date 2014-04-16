@@ -82,10 +82,5 @@ public class XmlHelper {
         return menuList;
     }
 
-    //public List<MenuItem> convertContainerToMenuItems(){
-
-    //    return null;
-    //}
-
 
 }

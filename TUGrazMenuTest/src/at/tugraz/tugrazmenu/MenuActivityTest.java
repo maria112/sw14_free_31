@@ -17,9 +17,10 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
     private MenuActivity activity;
     private ListView listMenus;
 
-    public MenuActivityTest(){
+    public MenuActivityTest() {
         super(MenuActivity.class);
     }
+
     protected void setUp() throws Exception {
         super.setUp();
         solo = new Solo(getInstrumentation(), getActivity());
@@ -32,8 +33,8 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
     }
 
     @UiThreadTest
-    public void testLoadData(){
-        List<MenuItemContainer>  menuItems = new ArrayList<MenuItemContainer>();
+    public void testLoadData() {
+        List<MenuItemContainer> menuItems = new ArrayList<MenuItemContainer>();
         menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
         menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
         activity.loadMenus(menuItems);

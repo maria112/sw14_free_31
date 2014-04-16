@@ -17,9 +17,7 @@ import java.util.List;
 
 public class XmlHelperTest extends TestCase {
     public void testGetSiteContent() {
-        Log.d("at.tugraz", "Trying GetSitecontent");
         try {
-            Log.d("at.tugraz", "Trying GetSitecontent");
             String expectedContent = "Expected Result";
             XmlHelper xmlHelper = new XmlHelper();
             String fileDirectory = Environment.getExternalStorageDirectory() + File.separator + "testfile";
@@ -29,7 +27,6 @@ public class XmlHelperTest extends TestCase {
             OutputStream outputStream = new FileOutputStream(testFile);
             outputStream.write(expectedContent.getBytes(Charset.forName("UTF-8")));
             outputStream.close();
-            Log.d("at.tugraz", testFile.toURI().toURL().toString());
             String content = xmlHelper.getSiteContent(testFile.toURI().toURL().toString());
             assertEquals(expectedContent, content);
 
@@ -84,14 +81,12 @@ public class XmlHelperTest extends TestCase {
 
     public void testCreateMenuListException() throws IOException, SAXException, ParserConfigurationException {
         XmlHelper xmlHelper = new XmlHelper();
-        NodeList nodes = xmlHelper.splitBodyIntoSingleItems("<item></item>","item");
-        try{
+        NodeList nodes = xmlHelper.splitBodyIntoSingleItems("<item></item>", "item");
+        try {
             xmlHelper.createMenuList(nodes);
             fail();
-        }catch (IllegalStateException e){
-
+        } catch (IllegalStateException e) {
+            
         }
-
-
     }
 }
