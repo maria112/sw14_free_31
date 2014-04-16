@@ -1,20 +1,22 @@
+package at.tugraz.tugrazmenu;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import android.test.AndroidTestCase;
 import android.view.View;
-import at.tugraz.tugrazmenu.MenuItem;
+import at.tugraz.tugrazmenu.MenuItemContainer;
 import at.tugraz.tugrazmenu.MenuListAdapter;
 
 
 public class MenuListAdapterTest extends AndroidTestCase {
 	MenuListAdapter adapter;
-	List<MenuItem>  menuItems; 
+	List<MenuItemContainer>  menuItems;
 	
 	protected void setUp(){
-		menuItems = new ArrayList<MenuItem>();
-	    menuItems.add(new MenuItem("Menü 1", "", "", "gesunde Mahlzeit", ""));
-	    menuItems.add(new MenuItem("Menü 2", "", "", "ausgewogene Mahlzeit", ""));	
+		menuItems = new ArrayList<MenuItemContainer>();
+	    menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
+	    menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
 	    adapter = new MenuListAdapter(getContext(), menuItems);
 	}
 	

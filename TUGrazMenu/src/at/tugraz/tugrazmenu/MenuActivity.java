@@ -13,7 +13,7 @@ public class MenuActivity extends Activity {
 
     String urlString = "http://rss.tugraz.at/menue.xml";
     URL feedURL;
-    List<MenuItem> menuItems;
+    List<MenuItemContainer> menuItems;
     MenuListAdapter menuAdapter;
 
     @Override
@@ -25,13 +25,13 @@ public class MenuActivity extends Activity {
     protected void onStart() {
     	super.onStart();
     	//TODO - Just for testing
-        menuItems = new ArrayList<MenuItem>();
-        menuItems.add(new MenuItem("Menü 1", "", "", "gesunde Mahlzeit", ""));
-        menuItems.add(new MenuItem("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
+        menuItems = new ArrayList<MenuItemContainer>();
+        menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
+        menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
         loadMenus(menuItems);
     }
     
-    public void loadMenus(List<MenuItem> menus)
+    public void loadMenus(List<MenuItemContainer> menus)
     {
         menuAdapter = new MenuListAdapter(this, menus);
         ListView items = (ListView) findViewById(R.id.listMenuItems);

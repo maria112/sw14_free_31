@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 public class MenuListAdapter extends BaseAdapter {
 	private Context context;
-	private List<MenuItem> list;
+	private List<MenuItemContainer> list;
 	
-	public MenuListAdapter(Context context, List<MenuItem> list) {
+	public MenuListAdapter(Context context, List<MenuItemContainer> list) {
 		this.context = context; 
 		this.list = list;
 	}

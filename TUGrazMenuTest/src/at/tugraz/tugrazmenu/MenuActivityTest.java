@@ -16,7 +16,7 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
     private Solo solo;
     private MenuActivity activity;
     private ListView listMenus;
-    
+
     public MenuActivityTest(){
         super(MenuActivity.class);
     }
@@ -24,25 +24,25 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         super.setUp();
         solo = new Solo(getInstrumentation(), getActivity());
         activity = getActivity();
-        listMenus = (ListView) activity.findViewById(R.id.listMenuItems); 
+        listMenus = (ListView) activity.findViewById(R.id.listMenuItems);
     }
 
     protected void tearDown() throws Exception {
         super.tearDown();
     }
-    
+
     @UiThreadTest
     public void testLoadData(){
-    	List<MenuItem>  menuItems = new ArrayList<MenuItem>();
-        menuItems.add(new MenuItem("Menü 1", "", "", "gesunde Mahlzeit", ""));
-        menuItems.add(new MenuItem("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
+        List<MenuItemContainer>  menuItems = new ArrayList<MenuItemContainer>();
+        menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
+        menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
         activity.loadMenus(menuItems);
         assertEquals(2, listMenus.getCount());
         for (int i = 0; i < menuItems.size(); i++) {
             ViewGroup item = (ViewGroup) listMenus.getAdapter().getView(i, null, null);
             TextView txtTitle = (TextView) item.findViewById(R.id.textTitle);
             TextView txtDescription = (TextView) item.findViewById(R.id.textDescription);
-            assertEquals(menuItems.get(i).title, txtTitle.getText());        	
+            assertEquals(menuItems.get(i).title, txtTitle.getText());
             assertEquals(menuItems.get(i).description, txtDescription.getText());
         }
 

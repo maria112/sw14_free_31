@@ -8,6 +8,8 @@
          this package needs to link against the android.test library,
          which is needed when building test cases. -->
     <uses-sdk android:minSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <application>
         <uses-library android:name="android.test.runner"/>
     </application>
