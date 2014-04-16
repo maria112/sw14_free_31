@@ -14,14 +14,10 @@ public class FeedReader {
         //create correct parser
     }
 
-    public List<MenuItem> readFeed(){
+    public List<MenuItem> readFeed() {
 
         return null;
     }
-
-
-
-
 
 
 }

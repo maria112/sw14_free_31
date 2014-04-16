@@ -21,18 +21,17 @@ public class MenuActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
-    
+
     protected void onStart() {
-    	super.onStart();
-    	//TODO - Just for testing
+        super.onStart();
+        //TODO - Just for testing
         menuItems = new ArrayList<MenuItemContainer>();
         menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
         menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
         loadMenus(menuItems);
     }
-    
-    public void loadMenus(List<MenuItemContainer> menus)
-    {
+
+    public void loadMenus(List<MenuItemContainer> menus) {
         menuAdapter = new MenuListAdapter(this, menus);
         ListView items = (ListView) findViewById(R.id.listMenuItems);
         items.setAdapter(menuAdapter);

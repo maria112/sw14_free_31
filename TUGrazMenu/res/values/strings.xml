@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">TUGrazMenu</string>
+    <string name="invalid_node_list_exception">Input NodeList did not contain correct item Information.</string>
 </resources>
