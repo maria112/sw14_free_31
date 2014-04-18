@@ -1,6 +1,5 @@
 package at.tugraz.tugrazmenu;
 
-import android.util.Log;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
@@ -39,10 +38,8 @@ public class XmlHelper {
         InputSource inputSource = new InputSource();
         inputSource.setCharacterStream(stringReader);
         Document xmlDoc = documentBuilder.parse(inputSource);
-        NodeList nodeList = xmlDoc.getElementsByTagName(nameOfTagToGet);
 
-
-        return nodeList;
+        return xmlDoc.getElementsByTagName(nameOfTagToGet);
     }
 
     public List<MenuItemContainer> createMenuList(NodeList nodeList) {
@@ -55,8 +52,7 @@ public class XmlHelper {
             String pubDate = null;
 
             NodeList childNodes = nodeList.item(i).getChildNodes();
-            if (childNodes.getLength() >= 5)
-            {
+            if (childNodes.getLength() >= 5) {
                 for (int j = 0; j < childNodes.getLength(); j++) {
                     String nodeName = childNodes.item(j).getNodeName();
                     if (nodeName.equals("title")) {
@@ -71,12 +67,11 @@ public class XmlHelper {
                         pubDate = childNodes.item(j).getTextContent();
                     }
                 }
-                menuList.add(new MenuItemContainer(title,link,guid,description,pubDate));
+                menuList.add(new MenuItemContainer(title, link, guid, description, pubDate));
             }
 
         }
-        if (menuList.isEmpty())
-        {
+        if (menuList.isEmpty()) {
             throw new IllegalStateException(String.valueOf(R.string.invalid_node_list_exception));
         }
         return menuList;

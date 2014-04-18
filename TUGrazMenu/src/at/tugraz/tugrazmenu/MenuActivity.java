@@ -5,14 +5,11 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MenuActivity extends Activity {
 
-    String urlString = "http://rss.tugraz.at/menue.xml";
-    URL feedURL;
     List<MenuItemContainer> menuItems;
     MenuListAdapter menuAdapter;
 
