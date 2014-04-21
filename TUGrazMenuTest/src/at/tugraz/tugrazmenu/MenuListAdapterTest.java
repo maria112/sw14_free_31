@@ -20,14 +20,10 @@ public class MenuListAdapterTest extends AndroidTestCase {
          
          List<MenuItem> menus = new ArrayList<MenuItem>();
          Restaurant restaurant = new Restaurant("Galileo", "", "");
-         MenuItem menu = new MenuItem();
-         menu.content = "Menü 1";
-         menu.restaurant = restaurant;
+         MenuItem menu = new MenuItem(restaurant, "Menü 1", null);
          menus.add(menu);
          
-         menu = new MenuItem();
-         menu.content = "Menü 2";
-         menu.restaurant = restaurant;
+         menu = new MenuItem(restaurant, "Menü 2", null);
          menus.add(menu);
          
          menusList.add(menus);
@@ -35,28 +31,13 @@ public class MenuListAdapterTest extends AndroidTestCase {
          
          menus = new ArrayList<MenuItem>();
          restaurant = new Restaurant("Mensa", "", ""); 
-         menu = new MenuItem();
-         menu.content = "Menü 3"; 
-         menu.restaurant = restaurant; 
+         menu = new MenuItem(restaurant, "Menü 3", null);
          menus.add(menu); 
          
          menusList.add(menus);
          restaurants.add(restaurant);
          
          adapter = new MenuListAdapter(getContext(), restaurants, menusList); 
-    	
-    	
-//    	menuItems = new ArrayList<MenuItem>();
-//        menuItems = new ArrayList<MenuItem>();
-//        MenuItem item = new MenuItem();
-//        item.content = "Menü 1";
-//        item.restaurant = new Restaurant("Mensa", "", "");
-//        menuItems.add(item); 
-//        item = new MenuItem();
-//        item.content = "Menü 2";
-//        item.restaurant = new Restaurant("Galileo", "", "");   
-//        menuItems.add(item);
-//        adapter = new MenuListAdapter(getContext(), menuItems); 
     }
 
     public void testRestaurantsCount() {
