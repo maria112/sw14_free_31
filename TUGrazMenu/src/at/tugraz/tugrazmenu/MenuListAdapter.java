@@ -1,50 +1,90 @@
 package at.tugraz.tugrazmenu;
 
 import java.util.List;
+import java.util.Map;
 
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
-public class MenuListAdapter extends BaseAdapter {
+public class MenuListAdapter extends BaseExpandableListAdapter {
     private Context context;
-    private List<MenuItemContainer> list;
+    private List<Restaurant> restaurants;
+    private List<List<MenuItem>> menus;
 
-    public MenuListAdapter(Context context, List<MenuItemContainer> list) {
+    public MenuListAdapter(Context context, List<Restaurant> restaurants, List<List<MenuItem>> menus) {
         this.context = context;
-        this.list = list;
+        this.restaurants = restaurants;
+        this.menus = menus;
     }
 
-    @Override
-    public int getCount() {
-        return list.size();
-    }
+	@Override
+	public Object getChild(int groupPosition, int childPosition) {
+		return menus.get(groupPosition).get(childPosition);
+	}
 
-    @Override
-    public Object getItem(int position) {
-        return list.get(position);
-    }
+	@Override
+	public long getChildId(int groupPosition, int childPosition) {
+		return childPosition;
+	}
 
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
+	@Override
+	public View getChildView(int groupPosition, int childPosition,
+			boolean isLastChild, View convertView, ViewGroup parent) {
+		if (convertView == null) {
+			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+			convertView = inflater.inflate(R.layout.fragment_menuitem, null);
+		}
+		TextView txtContent = (TextView) convertView.findViewById(R.id.textContent);
+		txtContent.setText(menus.get(groupPosition).get(childPosition).content);
+		return convertView;
+	}
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.fragment_menuitem, null);
-        }
-        TextView txtTitle = (TextView) convertView.findViewById(R.id.textTitle);
-        TextView txtDescription = (TextView) convertView.findViewById(R.id.textDescription);
-        txtTitle.setText(list.get(position).title);
-        txtDescription.setText(list.get(position).description);
+	@Override
+	public int getChildrenCount(int groupPosition) {
+		return menus.get(groupPosition).size();
+	}
 
-        return convertView;
-    }
+	@Override
+	public Object getGroup(int groupPosition) {
+		return restaurants.get(groupPosition);
+	}
+
+	@Override
+	public int getGroupCount() {
+		return restaurants.size();
+	}
+
+	@Override
+	public long getGroupId(int groupPosition) {
+		return groupPosition;
+	}
+
+	@Override
+	public View getGroupView(int groupPosition, boolean isExpanded,
+			View convertView, ViewGroup parent) {
+		if (convertView == null) {
+			LayoutInflater inflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+			convertView = inflater.inflate(R.layout.fragment_restaurant, null);
+		}
+		TextView txtRestaurant = (TextView) convertView.findViewById(R.id.textRestaurant);
+		txtRestaurant.setText(restaurants.get(groupPosition).name);
+
+		return convertView;
+	}
+
+	@Override
+	public boolean hasStableIds() {
+		return false;
+	}
+
+	@Override
+	public boolean isChildSelectable(int groupPosition, int childPosition) {
+		return false;
+	}
 }

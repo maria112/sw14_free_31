@@ -2,15 +2,17 @@ package at.tugraz.tugrazmenu;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MenuActivity extends Activity {
 
-    List<MenuItemContainer> menuItems;
     MenuListAdapter menuAdapter;
 
     @Override
@@ -22,15 +24,45 @@ public class MenuActivity extends Activity {
     protected void onStart() {
         super.onStart();
         //TODO - Just for testing
-        menuItems = new ArrayList<MenuItemContainer>();
-        menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
-        menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
-        loadMenus(menuItems);
+        List<List<MenuItem>> menusList = new ArrayList<List<MenuItem>>();
+        List<Restaurant> restaurants = new ArrayList<Restaurant>();
+        
+        List<MenuItem> menus = new ArrayList<MenuItem>();
+        Restaurant restaurant = new Restaurant("Galileo", "", "");
+        MenuItem menu = new MenuItem();
+        menu.content = "Menü 1";
+        menu.restaurant = restaurant;
+        menus.add(menu);
+        
+        menu = new MenuItem();
+        menu.content = "Menü 2";
+        menu.restaurant = restaurant;
+        menus.add(menu);
+        
+        menusList.add(menus);
+        restaurants.add(restaurant);
+        
+        menus = new ArrayList<MenuItem>();
+        restaurant = new Restaurant("Mensa", "", ""); 
+        menu = new MenuItem();
+        menu.content = "Menü 3"; 
+        menu.restaurant = restaurant; 
+        menus.add(menu); 
+        
+        menusList.add(menus);
+        restaurants.add(restaurant);
+        
+        loadMenus(restaurants, menusList); 
+     
     }
 
-    public void loadMenus(List<MenuItemContainer> menus) {
-        menuAdapter = new MenuListAdapter(this, menus);
-        ListView items = (ListView) findViewById(R.id.listMenuItems);
+    public void loadMenus(List<Restaurant> restaurants, List<List<MenuItem>> menus) {
+        menuAdapter = new MenuListAdapter(this, restaurants, menus);
+        ExpandableListView items = (ExpandableListView) findViewById(R.id.listMenuItems);
         items.setAdapter(menuAdapter);
+        
+        for (int i = 0; i < menuAdapter.getGroupCount(); i++ ) {
+        	items.expandGroup(i);
+        }
     }
 }

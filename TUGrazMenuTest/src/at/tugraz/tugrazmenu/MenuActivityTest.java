@@ -7,6 +7,7 @@ import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -15,7 +16,7 @@ import com.robotium.solo.Solo;
 public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActivity> {
     private Solo solo;
     private MenuActivity activity;
-    private ListView listMenus;
+    private ExpandableListView listMenus;
 
     public MenuActivityTest() {
         super(MenuActivity.class);
@@ -25,7 +26,7 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         super.setUp();
         solo = new Solo(getInstrumentation(), getActivity());
         activity = getActivity();
-        listMenus = (ListView) activity.findViewById(R.id.listMenuItems);
+        listMenus = (ExpandableListView) activity.findViewById(R.id.listMenuItems);
     }
 
     protected void tearDown() throws Exception {
@@ -33,21 +34,53 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
     }
 
     @UiThreadTest
-    public void testLoadData() {
-        List<MenuItemContainer> menuItems = new ArrayList<MenuItemContainer>();
-        menuItems.add(new MenuItemContainer("Menü 1", "", "", "gesunde Mahlzeit", ""));
-        menuItems.add(new MenuItemContainer("Menü 2", "", "", "ausgewogene Mahlzeit", ""));
-        activity.loadMenus(menuItems);
-        assertEquals(2, listMenus.getCount());
-        for (int i = 0; i < menuItems.size(); i++) {
-            ViewGroup item = (ViewGroup) listMenus.getAdapter().getView(i, null, null);
-            TextView txtTitle = (TextView) item.findViewById(R.id.textTitle);
-            TextView txtDescription = (TextView) item.findViewById(R.id.textDescription);
-            assertEquals(menuItems.get(i).title, txtTitle.getText());
-            assertEquals(menuItems.get(i).description, txtDescription.getText());
+    public void testLoadData() {        
+        
+        List<List<MenuItem>> menusList = new ArrayList<List<MenuItem>>();
+        List<Restaurant> restaurants = new ArrayList<Restaurant>();
+        
+        List<MenuItem> menus = new ArrayList<MenuItem>();
+        Restaurant restaurant = new Restaurant("Galileo", "", "");
+        MenuItem menu = new MenuItem();
+        menu.content = "Menü 1";
+        menu.restaurant = restaurant;
+        menus.add(menu);
+        
+        menu = new MenuItem();
+        menu.content = "Menü 2";
+        menu.restaurant = restaurant;
+        menus.add(menu);
+        
+        menusList.add(menus);
+        restaurants.add(restaurant);
+        
+        menus = new ArrayList<MenuItem>();
+        restaurant = new Restaurant("Mensa", "", ""); 
+        menu = new MenuItem();
+        menu.content = "Menü 3"; 
+        menu.restaurant = restaurant; 
+        menus.add(menu); 
+        
+        menusList.add(menus);
+        restaurants.add(restaurant);      
+        
+        activity.loadMenus(restaurants,menusList);
+        assertEquals(5, listMenus.getCount());
+        for (int i = 0; i < restaurants.size(); i++) {
+            ViewGroup itemview = (ViewGroup) listMenus.getExpandableListAdapter().getGroupView(i, false, null, null);
+            TextView txtRestaurant = (TextView) itemview.findViewById(R.id.textRestaurant);
+            assertEquals(restaurants.get(i).name, txtRestaurant.getText());
+            
+            for(int j = 0; j < menusList.get(i).size(); j++) {
+            	 ViewGroup menuview = (ViewGroup) listMenus.getExpandableListAdapter().getChildView(i, j, false, null, null);
+            	 TextView txtMenu = (TextView) menuview.findViewById(R.id.textContent);
+            	 assertEquals(menusList.get(i).get(j).content, txtMenu.getText());
+            	 
+            	 //ToDO Anzeige vom zweiten Textfeld noch testen
+            }
+           
         }
 
     }
-
 
 }
