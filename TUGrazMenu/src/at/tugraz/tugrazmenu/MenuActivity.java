@@ -1,15 +1,18 @@
 package at.tugraz.tugrazmenu;
 
 import android.app.Activity;
+import android.net.ParseException;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 
-
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class MenuActivity extends Activity {
 
@@ -21,33 +24,54 @@ public class MenuActivity extends Activity {
         setContentView(R.layout.main);
     }
 
+    public void fetchRssFeed(List<List<MenuItem>> menus, List<Restaurant> restaurantList) throws IOException, ParserConfigurationException, SAXException, ParseException, java.text.ParseException {
+        XmlHelper xmlHelper = new XmlHelper();
+        String content = xmlHelper.getSiteContent("http://rss.tugraz.at/menue.xml");
+        NodeList nodes = xmlHelper.splitBodyIntoSingleItems(content, "item");
+        List<MenuItemContainer> menuItemContainers = xmlHelper.createMenuList(nodes);
+        ContainerToMenuItemConverter converter = new ContainerToMenuItemConverter();
+        List<MenuItem> menuItemList = new ArrayList<MenuItem>();
+        for (int i = 0; i < menuItemContainers.size(); i++) {
+            converter.convertAndAddToList(menuItemContainers.get(i), menuItemList, restaurantList);
+        }        
+        for(int i = 0; i < restaurantList.size(); i++) {
+        	menus.add(new ArrayList<MenuItem>());
+        }
+        for(int i = 0; i < menuItemList.size(); i++) {
+        	Restaurant currentRestaurant = menuItemList.get(i).restaurant;
+        	int currentPosition = restaurantList.indexOf(currentRestaurant);
+        	menus.get(currentPosition).add(menuItemList.get(i));
+        }
+    }
+    
     protected void onStart() {
         super.onStart();
-        //TODO - Just for testing
-        List<List<MenuItem>> menusList = new ArrayList<List<MenuItem>>();
-        List<Restaurant> restaurants = new ArrayList<Restaurant>();
-        
-        List<MenuItem> menus = new ArrayList<MenuItem>();
-        Restaurant restaurant = new Restaurant("Galileo", "", "");
-        MenuItem menu = new MenuItem(restaurant, "Menü 1", null);
-        menus.add(menu);
-        
-        menu = new MenuItem(restaurant, "Menü 2", null);
-        menus.add(menu);
-        
-        menusList.add(menus);
-        restaurants.add(restaurant);
-        
-        menus = new ArrayList<MenuItem>();
-        restaurant = new Restaurant("Mensa", "", ""); 
-        menu = new MenuItem(restaurant, "Menü 3", null); 
-        menus.add(menu); 
-        
-        menusList.add(menus);
-        restaurants.add(restaurant);
-        
-        loadMenus(restaurants, menusList); 
-     
+
+        // Download RSS feed in new thread
+        // Networking is not allowed on the main UI thread
+        Thread thread = new Thread(new Runnable(){
+            @Override
+            public void run() {
+	            final List<List<MenuItem>> menusList = new ArrayList<List<MenuItem>>();
+	            final List<Restaurant> restaurants = new ArrayList<Restaurant>();
+				try {
+					fetchRssFeed(menusList, restaurants);
+				} catch (ParseException | IOException
+						| ParserConfigurationException | SAXException
+						| java.text.ParseException e) {
+					e.printStackTrace();
+				}
+				// Update view in main UI thread (cannot be updated from other threads)
+				MenuActivity.this.runOnUiThread(new Runnable() {
+			        @Override
+			        public void run() {
+			        	loadMenus(restaurants, menusList);
+			        }
+				});
+            }
+        });
+
+        thread.start();    
     }
 
     public void loadMenus(List<Restaurant> restaurants, List<List<MenuItem>> menus) {
@@ -55,8 +79,9 @@ public class MenuActivity extends Activity {
         ExpandableListView items = (ExpandableListView) findViewById(R.id.listMenuItems);
         items.setAdapter(menuAdapter);
         
-        for (int i = 0; i < menuAdapter.getGroupCount(); i++ ) {
-        	items.expandGroup(i);
-        }
+        //TODO - Show all menus (or only restaurants)?
+//        for (int i = 0; i < menuAdapter.getGroupCount(); i++ ) {
+//        	items.expandGroup(i);
+//        }
     }
 }
