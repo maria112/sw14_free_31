@@ -59,7 +59,7 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         restaurants.add(restaurant);      
         
         activity.loadMenus(restaurants,menusList);
-        assertEquals(5, listMenus.getCount());
+        assertEquals(2, listMenus.getCount());
         for (int i = 0; i < restaurants.size(); i++) {
             ViewGroup itemview = (ViewGroup) listMenus.getExpandableListAdapter().getGroupView(i, false, null, null);
             TextView txtRestaurant = (TextView) itemview.findViewById(R.id.textRestaurant);
