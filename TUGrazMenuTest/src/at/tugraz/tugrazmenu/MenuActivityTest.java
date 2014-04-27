@@ -1,6 +1,8 @@
 package at.tugraz.tugrazmenu;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import android.test.ActivityInstrumentationTestCase2;
@@ -76,5 +78,42 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         }
 
     }
-
+    
+    public void testFilterMenus(){
+    	List<Restaurant> currentRestaurants = new ArrayList<Restaurant>();
+    	List<List<MenuItem>> currentRestaurantMenus = new ArrayList<List<MenuItem>>();
+        
+        List<Restaurant> allRestaurants = new ArrayList<Restaurant>();
+        List<List<MenuItem>> allRestaurantMenus = new ArrayList<List<MenuItem>>();
+        
+        List<MenuItem> menusList = new ArrayList<MenuItem>();
+        
+        GregorianCalendar today = new GregorianCalendar();
+        Restaurant restaurant = new Restaurant("Mensa", "", "");
+        MenuItem menu = new MenuItem(restaurant, "Menü 1", today);
+        allRestaurants.add(restaurant);
+        menusList.add(menu);
+        allRestaurantMenus.add(menusList);
+        
+        menusList = new ArrayList<MenuItem>();
+        GregorianCalendar date = new GregorianCalendar(2013, 2, 2);
+        restaurant = new Restaurant("Galileo", "", "");
+        menu = new MenuItem(restaurant, "Menü 2", date);
+        menusList.add(menu);
+        date = new GregorianCalendar();
+        menu = new MenuItem(restaurant, "Menü 3", date);
+        menusList.add(menu);
+        allRestaurants.add(restaurant);
+        allRestaurantMenus.add(menusList);
+ 
+        activity.filterMenus(allRestaurants, allRestaurantMenus, currentRestaurants, currentRestaurantMenus);
+        assertEquals(allRestaurants.size(), currentRestaurants.size());
+        assertEquals(allRestaurantMenus.size(), currentRestaurantMenus.size());
+        assertEquals(1, currentRestaurantMenus.get(1).size());
+        assertEquals(allRestaurants.get(0), currentRestaurants.get(0));
+        assertEquals(allRestaurantMenus.get(0).get(0), currentRestaurantMenus.get(0).get(0));
+        assertEquals(allRestaurantMenus.get(1).get(1), currentRestaurantMenus.get(1).get(0));
+        assertEquals(today, currentRestaurantMenus.get(0).get(0).date);  
+        assertEquals(1, currentRestaurantMenus.get(0).size());
+    }
 }
