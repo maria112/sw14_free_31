@@ -144,6 +144,9 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         assertEquals(5, adapter.getCount());
         
         PageToday pageMonday = (PageToday)adapter.getItem(0);
-        assertEquals(2, pageMonday.dayOfWeek);     
+        assertEquals(Calendar.MONDAY, pageMonday.dayOfWeek);
+        
+        TextView weekday = (TextView) pageMonday.getView().findViewById(R.id.textweekday);
+        assertEquals("Montag", weekday.getText());
     }
 }
