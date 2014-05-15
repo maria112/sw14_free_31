@@ -41,6 +41,18 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         super.tearDown();
         DataStore.getRestaurants().clear();
     }
+    
+    public void testDisplayCurrentWeekday(){
+    	GregorianCalendar currentDay = new GregorianCalendar();
+    	int day = currentDay.get(Calendar.DAY_OF_WEEK);
+    
+    	if(day > 1 && day < 6){
+    		ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
+    		int currentItem = pager.getCurrentItem();
+    		assertEquals(day-2, currentItem);
+    	}
+    }
+    
 
     @UiThreadTest
     public void testLoadData() {       
