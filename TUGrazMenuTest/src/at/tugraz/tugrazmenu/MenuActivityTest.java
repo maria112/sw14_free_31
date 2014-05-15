@@ -8,6 +8,8 @@ import java.util.List;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.ActivityTestCase;
+import android.test.ActivityUnitTestCase;
 import android.test.UiThreadTest;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,8 +72,10 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         restaurants.add(restaurant); 
 
         ViewPager pager = (ViewPager)activity.findViewById(R.id.pager);
+        pager.setCurrentItem(0);
         FragmentPagerAdapter adapter = (FragmentPagerAdapter)pager.getAdapter();
         PageToday pageMonday = (PageToday)adapter.getItem(0);
+        
         pageMonday.loadMenus(restaurants, menusList);
         
         listMenus = (ExpandableListView) pageMonday.getView().findViewById(R.id.listMenuItems);        
@@ -137,16 +141,18 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         assertEquals(monday, currentRestaurantMenus.get(0).get(0).date);  
         assertEquals(1, currentRestaurantMenus.get(0).size());
     }
-    
+
+    @UiThreadTest
     public void testPageAdapter(){
     	ViewPager pager = (ViewPager)activity.findViewById(R.id.pager);
+    	pager.setCurrentItem(1);
         FragmentPagerAdapter adapter = (FragmentPagerAdapter)pager.getAdapter();
         assertEquals(5, adapter.getCount());
         
-        PageToday pageMonday = (PageToday)adapter.getItem(0);
-        assertEquals(Calendar.MONDAY, pageMonday.dayOfWeek);
+        PageToday pageTuesday = (PageToday)adapter.getItem(1);
+        assertEquals(Calendar.TUESDAY, pageTuesday.dayOfWeek);
         
-        TextView weekday = (TextView) pageMonday.getView().findViewById(R.id.textweekday);
-        assertEquals("Montag", weekday.getText());
+        TextView weekday = (TextView) pageTuesday.getView().findViewById(R.id.textrestaurant);
+        assertEquals("Dienstag", weekday.getText());
     }
 }
