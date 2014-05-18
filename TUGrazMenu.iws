@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="D/" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="LISTPOP" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
   </component>
   <component name="ChangeListManager">
@@ -73,19 +73,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenu/AndroidManifest.xml">
+      <file leaf-file-name="HtmlParserTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/HtmlParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="47" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="528">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="51" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+            <state line="98" column="1" selection-start="4774" selection-end="4774" vertical-scroll-proportion="0.84753364" vertical-offset="1099" max-vertical-offset="1768">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,72 +84,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/layout/main.xml">
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/XmlHelper.java">
+      <file leaf-file-name="HtmlParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/HtmlParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="0" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1606">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XmlHelperTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/XmlHelperTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="45" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.0" vertical-offset="1072" max-vertical-offset="1870">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContainerToMenuItemConverterTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverterTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1452">
+            <state line="39" column="0" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1785">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuListAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="39" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1056">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContainerToMenuItemConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1298">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuItemContainerTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuItemContainerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="36" selection-start="155" selection-end="155" vertical-scroll-proportion="0.04" vertical-offset="86" max-vertical-offset="726">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -166,7 +98,73 @@
       <file leaf-file-name="MenuListAdapterTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuListAdapterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="242" max-vertical-offset="1100">
+            <state line="31" column="30" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1190">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurantActivityTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/RestaurantActivityTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="828" selection-end="1227" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="714">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestaurantActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/RestaurantActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="13" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="697">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeekFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/WeekFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="323">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/layout/main.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeedReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/FeedReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="493">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuItemContainerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuItemContainerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="561">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MenuActivityTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="70" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="2992">
               <folding />
             </state>
           </provider>
@@ -207,23 +205,27 @@
         <option value="$PROJECT_DIR$/TUGrazMenuTest/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/TUGrazMenu/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MockNodeList.java" />
-        <option value="$PROJECT_DIR$/TUGrazMenu/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverterTest.java" />
         <option value="$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/XmlHelperTest.java" />
         <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/Restaurant.java" />
-        <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverter.java" />
         <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItem.java" />
         <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/XmlHelper.java" />
         <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuActivity.java" />
         <option value="$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverterTest.java" />
+        <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/HtmlParserTest.java" />
+        <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverter.java" />
+        <option value="$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuItemContainerTest.java" />
+        <option value="$PROJECT_DIR$/TUGrazMenu/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/HtmlParser.java" />
+        <option value="$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/HtmlParserTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-5" />
-    <option name="y" value="33" />
-    <option name="width" value="2058" />
-    <option name="height" value="1124" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -341,6 +343,132 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenuTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenuTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tugrazmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenuTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tugrazmenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TUGrazMenu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -431,104 +559,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenuTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenuTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tugrazmenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tugrazmenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TUGrazMenu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -545,21 +575,22 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/TUGrazMenu.ipr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/TUGrazMenu/libs/android-support-v4.jar!/" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="true" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0362b36b8a14ce77" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="GalaxyNexus" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -572,6 +603,8 @@
       <recent name="at.tugraz.tugrazmenu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Benny\Dropbox\Uni\SW\App\sw14_free_31\TUGrazMenu\libs" />
+      <recent name="C:\Users\Benny\Dropbox\Uni\SW\App\sw14_free_31\TUGrazMenuTest\libs" />
       <recent name="C:\Users\Benny\Dropbox\Uni\SW\App\TUGrazMenu" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -919,11 +952,15 @@
       <workItem from="1397746404409" duration="823000" />
       <workItem from="1397762107139" duration="2718000" />
       <workItem from="1397832910408" duration="3969000" />
+      <workItem from="1400328498365" duration="1591000" />
+      <workItem from="1400330536196" duration="20004000" />
+      <workItem from="1400399391656" duration="12479000" />
+      <workItem from="1400431291366" duration="66000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90359000" />
+    <option name="totallyTimeSpent" value="124499000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -946,68 +983,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="33" width="2058" height="1124" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286004" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.128" sideWeight="0.4236006" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23636363" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.128" sideWeight="0.4236006" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296146" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33164302" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23585913" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272727" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.207" sideWeight="0.5763994" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3255578" sideWeight="0.7805" order="5" side_tool="false" content_ui="tabs" x="21" y="371" width="1878" height="308" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20660277" sideWeight="0.5763994" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3197861" sideWeight="0.5489883" order="5" side_tool="false" content_ui="tabs" x="21" y="371" width="1878" height="308" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.326572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296146" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.128" sideWeight="0.4236006" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.207" sideWeight="0.5763994" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3255578" sideWeight="0.7805" order="5" side_tool="false" content_ui="tabs" x="21" y="371" width="1878" height="308" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889345" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.326572" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.128" sideWeight="0.4236006" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296146" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33164302" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -1030,57 +1037,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="242">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="1232">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItemContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="200" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="352">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/Restaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="15" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="990">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/XmlHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="81" column="24" selection-start="3324" selection-end="3324" vertical-scroll-proportion="0.0" vertical-offset="1384" max-vertical-offset="2134">
@@ -1091,18 +1047,14 @@
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="29" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="374">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="60" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="352">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,23 +1074,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItemContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="200" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="572">
-          <folding />
-        </state>
+        <state line="10" column="3" selection-start="200" selection-end="301" vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="572" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="352">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="352" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/Restaurant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="462">
-          <folding />
-        </state>
+        <state line="7" column="24" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="462" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/AndroidManifest.xml">
@@ -1151,7 +1097,9 @@
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/XmlHelperTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="308" max-vertical-offset="1188">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1165,9 +1113,7 @@
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="5" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="1276">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,7 +1121,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="1012">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1189,7 +1135,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="0" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="616" max-vertical-offset="836">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1203,7 +1149,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="45" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="663">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1211,6 +1157,20 @@
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="34" selection-start="687" selection-end="687" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="357">
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1220,9 +1180,7 @@
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="459">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,25 +1188,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="357">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="459">
-          <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="357">
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1256,9 +1196,7 @@
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="459">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,7 +1204,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="13" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="357">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1286,41 +1224,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="603" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="338" selection-end="338" vertical-scroll-proportion="0.0" vertical-offset="489" max-vertical-offset="1276">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="66" max-vertical-offset="242">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/android-sdk/sources/android-19/java/lang/Double.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="0" selection-start="9628" selection-end="9628" vertical-scroll-proportion="0.33222038" vertical-offset="5939" max-vertical-offset="10450" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuListAdapterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="968">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="47" selection-start="756" selection-end="756" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="528">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="4" selection-start="569" selection-end="647" vertical-scroll-proportion="0.26666668" vertical-offset="60" max-vertical-offset="660">
@@ -1328,89 +1231,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/XmlHelperTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="45" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.0" vertical-offset="1072" max-vertical-offset="1870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/XmlHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0" vertical-offset="331" max-vertical-offset="1606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/Restaurant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="418">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItemContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="3" selection-start="200" selection-end="301" vertical-scroll-proportion="0.3630363" vertical-offset="0" max-vertical-offset="606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="484">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1298">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="2226" selection-end="2226" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1452">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="3" selection-start="200" selection-end="301" vertical-scroll-proportion="0.3630363" vertical-offset="0" max-vertical-offset="606" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="39" selection-start="1171" selection-end="1171" vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="1056">
+        <state line="42" column="39" selection-start="1357" selection-end="1357" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1632">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="47" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0" vertical-offset="49" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/DataStore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="53" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="51" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+        <state line="16" column="4" selection-start="470" selection-end="470" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/android-sdk/sdk/sources/android-19/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="546" column="28" selection-start="21111" selection-end="21111" vertical-scroll-proportion="0.0" vertical-offset="8715" max-vertical-offset="23205">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/Restaurant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="34" selection-start="142" selection-end="142" vertical-scroll-proportion="0.14166667" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/XmlHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="2620" selection-end="2620" vertical-scroll-proportion="0.0" vertical-offset="279" max-vertical-offset="1445">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/FeedReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuItemContainerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="782" selection-end="782" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="1" selection-start="2937" selection-end="2937" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/WeekFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/layout/main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/RestaurantActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="39" selection-start="317" selection-end="317" vertical-scroll-proportion="-4.08" vertical-offset="0" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/ContainerToMenuItemConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="60" selection-start="1082" selection-end="1091" vertical-scroll-proportion="-0.010186757" vertical-offset="346" max-vertical-offset="935">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/XmlHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="21" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="70" selection-start="2940" selection-end="2940" vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="2992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuListAdapterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="30" selection-start="931" selection-end="931" vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1190">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/RestaurantActivityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="828" selection-end="1227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TUGrazMenu/src/at/tugraz/tugrazmenu/HtmlParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1785">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenu/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/MenuItemContainerTest.java">
+    <entry file="file://$PROJECT_DIR$/TUGrazMenuTest/src/at/tugraz/tugrazmenu/HtmlParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="36" selection-start="155" selection-end="155" vertical-scroll-proportion="0.04" vertical-offset="86" max-vertical-offset="726">
-          <folding />
+        <state line="98" column="1" selection-start="4774" selection-end="4774" vertical-scroll-proportion="0.84753364" vertical-offset="1099" max-vertical-offset="1768">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1490,6 +1477,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>android-support-v4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

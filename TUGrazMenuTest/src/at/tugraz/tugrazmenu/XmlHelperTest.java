@@ -86,7 +86,7 @@ public class XmlHelperTest extends TestCase {
             xmlHelper.createMenuList(nodes);
             fail();
         } catch (IllegalStateException e) {
-            
+
         }
     }
 }

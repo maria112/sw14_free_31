@@ -157,11 +157,27 @@
       <module fileurl="file://$PROJECT_DIR$/TUGrazMenuTest/TUGrazMenuTest.iml" filepath="$PROJECT_DIR$/TUGrazMenuTest/TUGrazMenuTest.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Android API 19 Platform" project-jdk-type="Android SDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="Android API 19 Platform" project-jdk-type="Android SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
+  </component>
+  <component name="libraryTable">
+    <library name="android-support-v4">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/TUGrazMenu/libs/android-support-v4.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="commons-lang3-3.3.2">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/TUGrazMenu/libs/commons-lang3-3.3.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
   </component>
 </project>
 

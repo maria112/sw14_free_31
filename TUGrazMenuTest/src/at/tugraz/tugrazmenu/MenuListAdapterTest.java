@@ -12,32 +12,32 @@ import at.tugraz.tugrazmenu.MenuListAdapter;
 public class MenuListAdapterTest extends AndroidTestCase {
     MenuListAdapter adapter;
     List<List<MenuItem>> menusList;
-    List<Restaurant>restaurants; 
+    List<Restaurant> restaurants;
 
     protected void setUp() {
-    	menusList = new ArrayList<List<MenuItem>>();
+        menusList = new ArrayList<List<MenuItem>>();
         restaurants = new ArrayList<Restaurant>();
-         
-         List<MenuItem> menus = new ArrayList<MenuItem>();
-         Restaurant restaurant = new Restaurant("Galileo", "", "");
-         MenuItem menu = new MenuItem(restaurant, "Menü 1", null);
-         menus.add(menu);
-         
-         menu = new MenuItem(restaurant, "Menü 2", null);
-         menus.add(menu);
-         
-         menusList.add(menus);
-         restaurants.add(restaurant);
-         
-         menus = new ArrayList<MenuItem>();
-         restaurant = new Restaurant("Mensa", "", ""); 
-         menu = new MenuItem(restaurant, "Menü 3", null);
-         menus.add(menu); 
-         
-         menusList.add(menus);
-         restaurants.add(restaurant);
-         
-         adapter = new MenuListAdapter(getContext(), restaurants, menusList); 
+
+        List<MenuItem> menus = new ArrayList<MenuItem>();
+        Restaurant restaurant = new Restaurant("Galileo", "", "");
+        MenuItem menu = new MenuItem(restaurant, "Menü 1", null);
+        menus.add(menu);
+
+        menu = new MenuItem(restaurant, "Menü 2", null);
+        menus.add(menu);
+
+        menusList.add(menus);
+        restaurants.add(restaurant);
+
+        menus = new ArrayList<MenuItem>();
+        restaurant = new Restaurant("Mensa", "", "");
+        menu = new MenuItem(restaurant, "Menü 3", null);
+        menus.add(menu);
+
+        menusList.add(menus);
+        restaurants.add(restaurant);
+
+        adapter = new MenuListAdapter(getContext(), restaurants, menusList);
     }
 
     public void testRestaurantsCount() {
