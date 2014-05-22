@@ -1,9 +1,14 @@
 package at.tugraz.tugrazmenu;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.test.ActivityInstrumentationTestCase2;
+import android.test.UiThreadTest;
 import android.widget.TextView;
 
 public class RestaurantActivityTest extends ActivityInstrumentationTestCase2<RestaurantActivity> {
@@ -33,4 +38,22 @@ public class RestaurantActivityTest extends ActivityInstrumentationTestCase2<Res
         assertEquals("Lessingstraße 10", adress.getText());
         assertEquals("0316 12345", telefon.getText());
     }
+	  
+	    @UiThreadTest
+	    public void testCameraPosition(){
+		  GoogleMap map = ((MapFragment) activity.getFragmentManager().findFragmentById(R.id.map)).getMap();
+		  double latitude = map.getCameraPosition().target.latitude;
+		  double longitude = map.getCameraPosition().target.longitude;
+		  float zoom = map.getCameraPosition().zoom;
+		  
+		  assertEquals(15.4520016, longitude, 0.00001); 
+		  assertEquals(47.0610254, latitude, 0.00001); 
+		  assertEquals(14.0f, zoom); 
+	  }
+	  
+	    @UiThreadTest
+	    public void testMyPosition(){
+		 GoogleMap map = ((MapFragment) activity.getFragmentManager().findFragmentById(R.id.map)).getMap();
+		 assertEquals(true, map.isMyLocationEnabled()); 
+	  }
 }
