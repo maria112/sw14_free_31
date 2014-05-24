@@ -1,17 +1,23 @@
 package at.tugraz.tugrazmenu;
 
+import java.io.IOException;
+import java.util.List;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.ActionBar;
-import android.app.Fragment;
+import android.content.Context;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.os.Build;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class RestaurantActivity extends Activity {
 
@@ -32,4 +38,50 @@ public class RestaurantActivity extends Activity {
 		adressField.setText(adress);
 		telField.setText(telNr);
 	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+		final View mapView = getFragmentManager().findFragmentById(R.id.map).getView();
+		mapView.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+            @SuppressLint("NewApi")
+			@Override
+            public void onGlobalLayout() {        		
+        		GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+        		map.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(47.0610254, 15.4520016)));
+        		map.moveCamera(CameraUpdateFactory.zoomTo(14));
+        		try {
+					setRestaurantMarker();
+				} catch (IOException e) {
+					e.printStackTrace();
+				} 
+        		
+                mapView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+            }
+        });
+	}
+	
+
+	public void setRestaurantMarker() throws IOException{
+		Context context = getApplicationContext(); 
+		Geocoder geo = new Geocoder(context);
+		double latitude = 0;
+		double longitue = 0;
+		String adress = getIntent().getExtras().getString("adress");
+		List<Address>addresses = geo.getFromLocationName(adress, 5); 	
+		 if (addresses.size() > 0) {
+			 latitude = addresses.get(0).getLatitude();
+			 longitue = addresses.get(0).getLongitude();
+		 }
+		 
+		 String restaurant = getIntent().getExtras().getString("name");
+		 GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+		 map.addMarker(new MarkerOptions().position(new LatLng(latitude, longitue)).title(restaurant));	
+		 
+		map.setMyLocationEnabled(true);
+	}
 }
+	
+	
+
