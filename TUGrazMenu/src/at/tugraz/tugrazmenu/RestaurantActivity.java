@@ -63,23 +63,27 @@ public class RestaurantActivity extends Activity {
 	}
 	
 
-	public void setRestaurantMarker() throws IOException{
+	public void setRestaurantMarker() throws IOException{ 
+		String restaurant = getIntent().getExtras().getString("name");
+		String adress = getIntent().getExtras().getString("adress");
+		GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
+		map.addMarker(new MarkerOptions().position(getRestaurantLocation(adress)).title(restaurant));	
+		 
+		map.setMyLocationEnabled(true);
+	}
+	
+	public LatLng getRestaurantLocation(String adress) throws IOException{
 		Context context = getApplicationContext(); 
 		Geocoder geo = new Geocoder(context);
 		double latitude = 0;
 		double longitue = 0;
-		String adress = getIntent().getExtras().getString("adress");
-		List<Address>addresses = geo.getFromLocationName(adress, 5); 	
-		 if (addresses.size() > 0) {
-			 latitude = addresses.get(0).getLatitude();
-			 longitue = addresses.get(0).getLongitude();
-		 }
-		 
-		 String restaurant = getIntent().getExtras().getString("name");
-		 GoogleMap map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
-		 map.addMarker(new MarkerOptions().position(new LatLng(latitude, longitue)).title(restaurant));	
-		 
-		map.setMyLocationEnabled(true);
+		List<Address>addresses = geo.getFromLocationName(adress + " Graz", 5); 	
+		if (addresses.size() > 0) {
+			latitude = addresses.get(0).getLatitude();
+			longitue = addresses.get(0).getLongitude();
+			return new LatLng(latitude, longitue);
+		}
+		return null; 
 	}
 }
 	

@@ -1,8 +1,11 @@
 package at.tugraz.tugrazmenu;
 
+import java.io.IOException;
+
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,7 +15,7 @@ import android.test.UiThreadTest;
 import android.widget.TextView;
 
 public class RestaurantActivityTest extends ActivityInstrumentationTestCase2<RestaurantActivity> {
-    Activity activity;
+    RestaurantActivity activity;
 
     public RestaurantActivityTest() {
         super(RestaurantActivity.class);
@@ -55,5 +58,11 @@ public class RestaurantActivityTest extends ActivityInstrumentationTestCase2<Res
 	    public void testMyPosition(){
 		 GoogleMap map = ((MapFragment) activity.getFragmentManager().findFragmentById(R.id.map)).getMap();
 		 assertEquals(true, map.isMyLocationEnabled()); 
+	  }
+	    
+	  public void testGetRestaurationLocation() throws IOException{
+		  LatLng location = activity.getRestaurantLocation("Lessingstraße 25");
+		  assertEquals(15.4520016, location.longitude, 0.02);
+		  assertEquals(47.0610254, location.latitude, 0.02);
 	  }
 }
