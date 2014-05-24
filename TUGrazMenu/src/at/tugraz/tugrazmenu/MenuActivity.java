@@ -31,7 +31,7 @@ public class MenuActivity extends FragmentActivity {
         
         GregorianCalendar currentDay = new GregorianCalendar();
         int day = currentDay.get(Calendar.DAY_OF_WEEK);
-        if (day == 6 || day == 1)
+        if (day == 7 || day == 1)
         {
         	Context context = getApplicationContext();
         	Toast toast = Toast.makeText(context, "Es sind leider keine Menüs für das Wochenende vorhanden!", Toast.LENGTH_LONG);

@@ -8,13 +8,9 @@ import java.util.List;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.test.ActivityInstrumentationTestCase2;
-import android.test.ActivityTestCase;
-import android.test.ActivityUnitTestCase;
 import android.test.UiThreadTest;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.robotium.solo.Solo;
@@ -42,17 +38,21 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         DataStore.getRestaurants().clear();
     }
 
-    public void testDisplayCurrentWeekday() {
-        GregorianCalendar currentDay = new GregorianCalendar();
-        int day = currentDay.get(Calendar.DAY_OF_WEEK);
-
-        if (day > 1 && day < 6) {
-            ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
-            int currentItem = pager.getCurrentItem();
-            assertEquals(day - 2, currentItem);
-        }
+	public void testDisplayCurrentWeekday(){
+    	GregorianCalendar currentDay = new GregorianCalendar();
+    	int day = currentDay.get(Calendar.DAY_OF_WEEK);
+    
+    	if(day > 1 && day < 7){
+    		ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
+    		int currentItem = pager.getCurrentItem();
+    		assertEquals(day-2, currentItem);
+    	}
+    	else {
+    		ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
+    		int currentItem = pager.getCurrentItem();
+    		assertEquals(Calendar.MONDAY-2, currentItem);
+    	}
     }
-
 
     @UiThreadTest
     public void testLoadData() {
