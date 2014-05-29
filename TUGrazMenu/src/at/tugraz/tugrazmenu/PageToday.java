@@ -1,10 +1,10 @@
 package at.tugraz.tugrazmenu;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,8 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
-import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.TextView;
 
 
@@ -87,7 +85,6 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
 	public void filterMenus(List<Restaurant> allRestaurants, List<List<MenuItem>> allRestaurantMenus,
 			List<Restaurant> currentRestaurants, List<List<MenuItem>> currentRestaurantMenus) {
 		Calendar today = new GregorianCalendar();
-		
 
 		for(int restaurantIndex = 0; restaurantIndex < allRestaurants.size(); restaurantIndex++){
 			List<MenuItem> currentMenus = new ArrayList<MenuItem>();
