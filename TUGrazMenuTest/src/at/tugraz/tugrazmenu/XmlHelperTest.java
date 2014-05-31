@@ -23,7 +23,6 @@ public class XmlHelperTest extends TestCase {
             String fileDirectory = Environment.getExternalStorageDirectory() + File.separator + "testfile";
             File testFile = new File(fileDirectory);
 
-            testFile.createNewFile();
             OutputStream outputStream = new FileOutputStream(testFile);
             outputStream.write(expectedContent.getBytes(Charset.forName("UTF-8")));
             outputStream.close();

@@ -1,6 +1,7 @@
 package at.tugraz.tugrazmenu;
 
 import org.apache.commons.lang3.StringEscapeUtils;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -12,7 +13,7 @@ public class HtmlParser extends XmlHelper {
         String[] date = formattedHtmlContent.split("<h1>");
         if (date.length > 1) {
             return date[1].split("ab")[1].split("</h1>")[0].trim();
-        }else throw new Exception("No Date Found");
+        } else throw new Exception("No Date Found");
     }
 
     public GregorianCalendar stringToGregorianCalendar(String dateString) throws ParseException {
@@ -36,7 +37,6 @@ public class HtmlParser extends XmlHelper {
     }
 
     public void populateItemAndRestaurantLists(GregorianCalendar startDate, String htmlContent, List<Restaurant> restaurants, List<MenuItem> menuItems) throws Exception {
-        //TODO skip current instead of throwing exception
         String contentSplitByDate[] = htmlContent.split("<h2>");
         List<GregorianCalendar> dates = getWeekDates(startDate);
         for (int i = 1; i < 6 && i < contentSplitByDate.length; i++) {
@@ -57,7 +57,7 @@ public class HtmlParser extends XmlHelper {
                 if (restaurantLocation > -1) {
                     currentRestaurant = restaurants.get(restaurantLocation);
                 } else {
-                    temp=htmlContent.split(Pattern.quote(currentRestaurant.name + " ("));
+                    temp = htmlContent.split(Pattern.quote(currentRestaurant.name + " ("));
                     if (temp.length > 1) {
                         currentRestaurant.address = temp[1].split(",")[0];
                         currentRestaurant.telephoneNumber = htmlContent.split(Pattern.quote(currentRestaurant.name + " ("))[1].split("Tel.")[1].split("\\)")[0].trim();
@@ -76,8 +76,7 @@ public class HtmlParser extends XmlHelper {
                     String description = menuItemDescriptions[k].split("</li>")[0];
                     MenuItem currentItem = new MenuItem(currentRestaurant, description, dates.get(i - 1));
                     currentItem.content = StringEscapeUtils.unescapeHtml4(currentItem.content);
-                    if(menuItemExistsInListAt(menuItems, currentItem) < 0)
-                    {
+                    if (menuItemExistsInListAt(menuItems, currentItem) < 0) {
                         menuItems.add(currentItem);
                     }
                 }
@@ -95,5 +94,5 @@ public class HtmlParser extends XmlHelper {
         }
         return index;
     }
-  }
+}
 

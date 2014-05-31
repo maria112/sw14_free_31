@@ -25,11 +25,10 @@ public class HtmlParserTest extends TestCase {
     public void testGetDateStringInvalidInput() throws Exception {
         String input = "Invalid Input";
         HtmlParser htmlParser = new HtmlParser();
-        try{
+        try {
             htmlParser.getDateString(input);
             Assert.fail("Exception expected");
-        }catch(Exception e)
-        {
+        } catch (Exception e) {
         }
     }
 
@@ -87,10 +86,10 @@ public class HtmlParserTest extends TestCase {
         Assert.assertEquals("Galileo", menuItemList.get(0).restaurant.name);
     }
 
-    public void testMenuItemExistsInListAt(){
+    public void testMenuItemExistsInListAt() {
         List<MenuItem> menuItemList = new ArrayList<>();
-        MenuItem itemInList = new MenuItem(new Restaurant("inList", null,null),"menu1",new GregorianCalendar(2001,1,1));
-        MenuItem itemNotInList = new MenuItem(new Restaurant("inList", null,null),"menu1",new GregorianCalendar(2001,2,1));
+        MenuItem itemInList = new MenuItem(new Restaurant("inList", null, null), "menu1", new GregorianCalendar(2001, 1, 1));
+        MenuItem itemNotInList = new MenuItem(new Restaurant("inList", null, null), "menu1", new GregorianCalendar(2001, 2, 1));
         menuItemList.add(itemInList);
         HtmlParser parser = new HtmlParser();
         Assert.assertEquals(0, parser.menuItemExistsInListAt(menuItemList, itemInList));

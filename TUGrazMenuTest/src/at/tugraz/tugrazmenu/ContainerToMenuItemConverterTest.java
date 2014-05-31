@@ -17,8 +17,8 @@ public class ContainerToMenuItemConverterTest extends TestCase {
                 "Tel. 0316–382370)<br>  • Griechischen Salat und Dessert [6,10]<br>";
 
         String pubDate = "pubDate";
-        List<MenuItem> menuItems = new ArrayList<MenuItem>();
-        List<Restaurant> restaurants = new ArrayList<Restaurant>();
+        List<MenuItem> menuItems = new ArrayList<>();
+        List<Restaurant> restaurants = new ArrayList<>();
         MenuItemContainer container = new MenuItemContainer(title, link, guid, description, pubDate);
         ContainerToMenuItemConverter converter = new ContainerToMenuItemConverter();
 
@@ -50,7 +50,7 @@ public class ContainerToMenuItemConverterTest extends TestCase {
     public void testExistsInRestaurantListAtIndex() {
         Restaurant listedRestaurant = new Restaurant("inList", "", "");
         Restaurant unlistedRestaurant = new Restaurant("notInList", "", "");
-        List<Restaurant> restaurantList = new ArrayList<Restaurant>();
+        List<Restaurant> restaurantList = new ArrayList<>();
         restaurantList.add(listedRestaurant);
         ContainerToMenuItemConverter containerToMenuItemConverter = new ContainerToMenuItemConverter();
         int i = containerToMenuItemConverter.existsInRestaurantListAtIndex(restaurantList, unlistedRestaurant);

@@ -22,20 +22,20 @@ public class ContainerToMenuItemConverter {
 
         for (int i = 1; i < splitByRestaurant.length; i++) {
             String name = splitByRestaurant[i].split("</b>")[0];
-            String address = (splitByRestaurant[i].substring(splitByRestaurant[i].indexOf("</b> (") + 6, splitByRestaurant[i].indexOf("Tel")-2));
+            String address = (splitByRestaurant[i].substring(splitByRestaurant[i].indexOf("</b> (") + 6, splitByRestaurant[i].indexOf("Tel") - 2));
             String telephoneNumber = (splitByRestaurant[i].substring(splitByRestaurant[i].indexOf("Tel. ") + 5, splitByRestaurant[i].indexOf(")<br>")));
 
-            Restaurant restaurant = new Restaurant(name,address,telephoneNumber);
+            Restaurant restaurant = new Restaurant(name, address, telephoneNumber);
             int indexOfRestaurant = existsInRestaurantListAtIndex(restaurantList, restaurant);
-            if (indexOfRestaurant != -1){
+            if (indexOfRestaurant != -1) {
                 currentRestaurant = restaurantList.get(indexOfRestaurant);
-            }else{
+            } else {
                 currentRestaurant = restaurant;
                 restaurantList.add(currentRestaurant);
             }
             String[] menuItems = splitByRestaurant[i].split("• ");
             for (int j = 1; j < menuItems.length; j++) {
-                String itemContent = menuItems[j].replace("<br>  ","");
+                String itemContent = menuItems[j].replace("<br>  ", "");
                 menuItemList.add(new MenuItem(currentRestaurant, itemContent, calendar));
             }
         }

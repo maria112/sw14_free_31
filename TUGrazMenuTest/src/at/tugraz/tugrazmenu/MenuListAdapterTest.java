@@ -1,12 +1,10 @@
 package at.tugraz.tugrazmenu;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.test.AndroidTestCase;
 import android.view.View;
-import at.tugraz.tugrazmenu.MenuItemContainer;
-import at.tugraz.tugrazmenu.MenuListAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MenuListAdapterTest extends AndroidTestCase {
@@ -15,10 +13,10 @@ public class MenuListAdapterTest extends AndroidTestCase {
     List<Restaurant> restaurants;
 
     protected void setUp() {
-        menusList = new ArrayList<List<MenuItem>>();
-        restaurants = new ArrayList<Restaurant>();
+        menusList = new ArrayList<>();
+        restaurants = new ArrayList<>();
 
-        List<MenuItem> menus = new ArrayList<MenuItem>();
+        List<MenuItem> menus = new ArrayList<>();
         Restaurant restaurant = new Restaurant("Galileo", "", "");
         MenuItem menu = new MenuItem(restaurant, "Menü 1", null);
         menus.add(menu);
@@ -29,7 +27,7 @@ public class MenuListAdapterTest extends AndroidTestCase {
         menusList.add(menus);
         restaurants.add(restaurant);
 
-        menus = new ArrayList<MenuItem>();
+        menus = new ArrayList<>();
         restaurant = new Restaurant("Mensa", "", "");
         menu = new MenuItem(restaurant, "Menü 3", null);
         menus.add(menu);

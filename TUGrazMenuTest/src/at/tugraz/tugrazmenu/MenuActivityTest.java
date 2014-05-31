@@ -1,10 +1,5 @@
 package at.tugraz.tugrazmenu;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
-
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.test.ActivityInstrumentationTestCase2;
@@ -12,8 +7,12 @@ import android.test.UiThreadTest;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
-
 import com.robotium.solo.Solo;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActivity> {
     private Solo solo;
@@ -38,20 +37,19 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         DataStore.getRestaurants().clear();
     }
 
-	public void testDisplayCurrentWeekday(){
-    	GregorianCalendar currentDay = new GregorianCalendar();
-    	int day = currentDay.get(Calendar.DAY_OF_WEEK);
-    
-    	if(day > 1 && day < 7){
-    		ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
-    		int currentItem = pager.getCurrentItem();
-    		assertEquals(day-2, currentItem);
-    	}
-    	else {
-    		ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
-    		int currentItem = pager.getCurrentItem();
-    		assertEquals(Calendar.MONDAY-2, currentItem);
-    	}
+    public void testDisplayCurrentWeekday() {
+        GregorianCalendar currentDay = new GregorianCalendar();
+        int day = currentDay.get(Calendar.DAY_OF_WEEK);
+
+        if (day > 1 && day < 7) {
+            ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
+            int currentItem = pager.getCurrentItem();
+            assertEquals(day - 2, currentItem);
+        } else {
+            ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
+            int currentItem = pager.getCurrentItem();
+            assertEquals(Calendar.MONDAY - 2, currentItem);
+        }
     }
 
     @UiThreadTest
@@ -61,10 +59,10 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         GregorianCalendar wednesday = (GregorianCalendar) monday.clone();
         wednesday.add(Calendar.DAY_OF_WEEK, 2);
 
-        List<List<MenuItem>> menusList = new ArrayList<List<MenuItem>>();
-        List<Restaurant> restaurants = new ArrayList<Restaurant>();
+        List<List<MenuItem>> menusList = new ArrayList<>();
+        List<Restaurant> restaurants = new ArrayList<>();
 
-        List<MenuItem> menus = new ArrayList<MenuItem>();
+        List<MenuItem> menus = new ArrayList<>();
         Restaurant restaurant = new Restaurant("Galileo", "", "");
         MenuItem menu = new MenuItem(restaurant, "Menü 1", monday);
         menus.add(menu);
@@ -75,7 +73,7 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         menusList.add(menus);
         restaurants.add(restaurant);
 
-        menus = new ArrayList<MenuItem>();
+        menus = new ArrayList<>();
         restaurant = new Restaurant("Mensa", "", "");
         menu = new MenuItem(restaurant, "Menü 3", monday);
         menus.add(menu);
@@ -116,13 +114,13 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         GregorianCalendar wednesday = (GregorianCalendar) monday.clone();
         wednesday.add(Calendar.DAY_OF_WEEK, 2);
 
-        List<Restaurant> currentRestaurants = new ArrayList<Restaurant>();
-        List<List<MenuItem>> currentRestaurantMenus = new ArrayList<List<MenuItem>>();
+        List<Restaurant> currentRestaurants = new ArrayList<>();
+        List<List<MenuItem>> currentRestaurantMenus = new ArrayList<>();
 
-        List<Restaurant> allRestaurants = new ArrayList<Restaurant>();
-        List<List<MenuItem>> allRestaurantMenus = new ArrayList<List<MenuItem>>();
+        List<Restaurant> allRestaurants = new ArrayList<>();
+        List<List<MenuItem>> allRestaurantMenus = new ArrayList<>();
 
-        List<MenuItem> menusList = new ArrayList<MenuItem>();
+        List<MenuItem> menusList = new ArrayList<>();
 
         Restaurant restaurant = new Restaurant("Mensa", "", "");
         MenuItem menu = new MenuItem(restaurant, "Menü 1", monday);
@@ -130,7 +128,7 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         menusList.add(menu);
         allRestaurantMenus.add(menusList);
 
-        menusList = new ArrayList<MenuItem>();
+        menusList = new ArrayList<>();
         restaurant = new Restaurant("Galileo", "", "");
         menu = new MenuItem(restaurant, "Menü 2", wednesday);
         menusList.add(menu);
