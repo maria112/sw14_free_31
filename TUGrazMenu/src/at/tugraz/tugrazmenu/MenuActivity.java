@@ -1,13 +1,13 @@
 package at.tugraz.tugrazmenu;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -31,11 +31,12 @@ public class MenuActivity extends FragmentActivity {
 
         GregorianCalendar currentDay = new GregorianCalendar();
         int day = currentDay.get(Calendar.DAY_OF_WEEK);
-        if (day == 7 || day == 1) {
-            Context context = getApplicationContext();
-            Toast toast = Toast.makeText(context, "Es sind leider keine Menüs für das Wochenende vorhanden!", Toast.LENGTH_LONG);
-            toast.show();
-        } else pager.setCurrentItem(day - 2);
+        if (day == 7 || day == 1)
+        {    	
+        	 Intent intent = new Intent(this, WeekendActivity.class);
+        	 startActivity(intent);
+        }
+        else pager.setCurrentItem(day-2);
     }
 
 
