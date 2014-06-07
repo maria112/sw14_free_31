@@ -3,6 +3,8 @@ package at.tugraz.tugrazmenu;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import android.util.Log;
+
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -29,7 +31,7 @@ public class DataStore {
             @Override
             public void run() {
                 synchronized (DataStore.class) {
-                    if (!restaurants.isEmpty()) {
+                    if (!restaurants.isEmpty() && !restaurantMenus.isEmpty()) {
                         handler.onDataLoaded();
                         return;
                     }
@@ -104,7 +106,7 @@ public class DataStore {
     }
 
     private static void fetchData(List<Restaurant> restaurants, List<List<MenuItem>> restaurantMenus) throws Exception {
-        List<MenuItem> menuItemList = new ArrayList<>();
+    	List<MenuItem> menuItemList = new ArrayList<>();
         fetchRssData(restaurants, menuItemList);
 
         fetchHtmlData(restaurants, menuItemList);

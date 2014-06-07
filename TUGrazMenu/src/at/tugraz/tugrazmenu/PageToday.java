@@ -3,6 +3,7 @@ package at.tugraz.tugrazmenu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
 
     MenuListAdapter menuAdapter;
     int dayOfWeek = Calendar.MONDAY;
+    ExpandableListView items; 
 
     public static Fragment getPageForDay(int dayOfWeek) {
         PageToday page = new PageToday();
@@ -29,8 +31,7 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.page_today, container, false);
 
-        ExpandableListView items = (ExpandableListView) rootView.findViewById(R.id.listMenuItems);
-
+         items = (ExpandableListView) rootView.findViewById(R.id.listMenuItems);
         items.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
@@ -64,7 +65,6 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
 
     public void onStart() {
         super.onStart();
-
         DataStore.loadData(this);
     }
 
@@ -84,7 +84,7 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
 
     public void filterMenus(List<Restaurant> allRestaurants, List<List<MenuItem>> allRestaurantMenus,
                             List<Restaurant> currentRestaurants, List<List<MenuItem>> currentRestaurantMenus) {
-        Calendar today = new GregorianCalendar();
+    	Calendar today = new GregorianCalendar();
 
         for (int restaurantIndex = 0; restaurantIndex < allRestaurants.size(); restaurantIndex++) {
             List<MenuItem> currentMenus = new ArrayList<>();
@@ -107,7 +107,6 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
 
     public void loadMenus(List<Restaurant> restaurants, List<List<MenuItem>> menus) {
         menuAdapter = new MenuListAdapter(getActivity(), restaurants, menus);
-        ExpandableListView items = (ExpandableListView) getView().findViewById(R.id.listMenuItems);
         items.setAdapter(menuAdapter);
 
         //TODO - Show all menus (or only restaurants)?
