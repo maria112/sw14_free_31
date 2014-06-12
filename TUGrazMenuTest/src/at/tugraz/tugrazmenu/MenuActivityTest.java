@@ -4,6 +4,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
     }
 
     protected void tearDown() throws Exception {
+        solo.finishOpenedActivities();
         super.tearDown();
         DataStore.getRestaurants().clear();
     }
@@ -103,12 +105,28 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
 
                 //ToDO Anzeige vom zweiten Textfeld noch testen
             }
-
         }
+    }
+    
+    @UiThreadTest
+    public void testPageAdapter() {
+        ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
+        pager.setCurrentItem(1);
+        FragmentPagerAdapter adapter = (FragmentPagerAdapter) pager.getAdapter();
+        assertEquals(5, adapter.getCount());
 
+        PageToday pageTuesday = (PageToday) adapter.getItem(1);
+        assertEquals(Calendar.TUESDAY, pageTuesday.dayOfWeek);
+
+        TextView weekday = (TextView) pageTuesday.getView().findViewById(R.id.textrestaurant);
+        assertEquals("Dienstag", weekday.getText());
     }
 
     public void testFilterMenus() {
+    	GregorianCalendar day = new GregorianCalendar();
+    	if((day.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY) || (day.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY)){
+    		return; 
+    	}
         GregorianCalendar monday = new GregorianCalendar();
         monday.roll(Calendar.DAY_OF_WEEK, -monday.get(Calendar.DAY_OF_WEEK) + 2);
         GregorianCalendar wednesday = (GregorianCalendar) monday.clone();
@@ -150,19 +168,5 @@ public class MenuActivityTest extends ActivityInstrumentationTestCase2<MenuActiv
         assertEquals(allRestaurantMenus.get(1).get(1), currentRestaurantMenus.get(1).get(0));
         assertEquals(monday, currentRestaurantMenus.get(0).get(0).date);
         assertEquals(1, currentRestaurantMenus.get(0).size());
-    }
-
-    @UiThreadTest
-    public void testPageAdapter() {
-        ViewPager pager = (ViewPager) activity.findViewById(R.id.pager);
-        pager.setCurrentItem(1);
-        FragmentPagerAdapter adapter = (FragmentPagerAdapter) pager.getAdapter();
-        assertEquals(5, adapter.getCount());
-
-        PageToday pageTuesday = (PageToday) adapter.getItem(1);
-        assertEquals(Calendar.TUESDAY, pageTuesday.dayOfWeek);
-
-        TextView weekday = (TextView) pageTuesday.getView().findViewById(R.id.textrestaurant);
-        assertEquals("Dienstag", weekday.getText());
-    }
+    } 
 }

@@ -89,9 +89,22 @@ public class DataStore {
         List<MenuItem> currentWeekMenus = new ArrayList<>();
 
         parser.populateItemAndRestaurantLists(startDate, content, currentWeekRestaurants, currentWeekMenus);
-
+        GregorianCalendar today = new GregorianCalendar();
+        boolean todayMenus = false;
+        int i = 0;
+        while (!todayMenus && i < menuItemList.size()){
+        	if (today.get(Calendar.ERA) == menuItemList.get(i).date.get(Calendar.ERA) && 
+        			today.get(Calendar.YEAR) == menuItemList.get(i).date.get(Calendar.YEAR) && 
+        					today.get(Calendar.DAY_OF_YEAR) == menuItemList.get(i).date.get(Calendar.DAY_OF_YEAR)){
+        		todayMenus = true;
+        	}
+        	i++;
+        }
+  
+        if(!todayMenus){
+        	today.roll(Calendar.DAY_OF_YEAR, -1);
+        }
         for (MenuItem currentWeekMenu : currentWeekMenus) {
-            GregorianCalendar today = new GregorianCalendar();
             if (currentWeekMenu.date.get(Calendar.ERA) == today.get(Calendar.ERA) &&
                     (currentWeekMenu.date.get(Calendar.YEAR) > today.get(Calendar.YEAR) ||
                             (currentWeekMenu.date.get(Calendar.YEAR) == today.get(Calendar.YEAR) &&

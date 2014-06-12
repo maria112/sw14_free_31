@@ -21,36 +21,54 @@ public class PageToday extends Fragment implements DataStore.DataStoreNotificati
     MenuListAdapter menuAdapter;
     int dayOfWeek = Calendar.MONDAY;
     ExpandableListView items; 
+    View viewRoot;
 
     public static Fragment getPageForDay(int dayOfWeek) {
         PageToday page = new PageToday();
         page.dayOfWeek = dayOfWeek;
         return page;
     }
+    
+    private View createView(Bundle savedInstanceState) {
+    	   View rootView = getActivity().getLayoutInflater().inflate(R.layout.page_today, null, false);
+
+           items = (ExpandableListView) rootView.findViewById(R.id.listMenuItems);
+          items.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+              @Override
+              public boolean onChildClick(ExpandableListView parent, View v,
+                                          int groupPosition, int childPosition, long id) {
+                  MenuItem menu = (MenuItem) menuAdapter.getChild(groupPosition, childPosition);
+                  startDetailView(menu);
+                  return false;
+              }
+          });
+
+          String[] daysOfWeek = {"Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"};
+          TextView day = (TextView) rootView.findViewById(R.id.textrestaurant);
+          int currentDay = dayOfWeek - 2;
+          day.setText(daysOfWeek[currentDay]);
+
+          return rootView;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        setRetainInstance(true);
+
+        viewRoot = createView(savedInstanceState);
+       
+    }
+    
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.page_today, container, false);
+        if (viewRoot != null && viewRoot.getParent() != null) {
+            ViewGroup parent = (ViewGroup) viewRoot.getParent();
+            parent.removeView(viewRoot);
+        }
 
-         items = (ExpandableListView) rootView.findViewById(R.id.listMenuItems);
-        items.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-            @Override
-            public boolean onChildClick(ExpandableListView parent, View v,
-                                        int groupPosition, int childPosition, long id) {
-                MenuItem menu = (MenuItem) menuAdapter.getChild(groupPosition, childPosition);
-                startDetailView(menu);
-
-                //Toast toast = Toast.makeText(getActivity(), "Menü wurde geklickt", Toast.LENGTH_LONG);
-                //toast.show();
-                return false;
-            }
-        });
-
-        String[] daysOfWeek = {"Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag"};
-        TextView day = (TextView) rootView.findViewById(R.id.textrestaurant);
-        int currentDay = dayOfWeek - 2;
-        day.setText(daysOfWeek[currentDay]);
-
-        return rootView;
+        return viewRoot;
     }
 
     public void startDetailView(MenuItem menue) {
