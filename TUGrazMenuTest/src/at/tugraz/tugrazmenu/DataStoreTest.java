@@ -4,31 +4,31 @@ import junit.framework.TestCase;
 
 public class DataStoreTest extends TestCase {
 
-    class NotificationHandler implements DataStore.DataStoreNotification {
+	class NotificationHandler implements DataStore.DataStoreNotification {
 
-        boolean haveData = false;
+		boolean haveData = false;
 
-        public void onDataLoaded() {
-            haveData = true;
-        }
+		@Override
+		public void onDataLoaded() {
+			haveData = true;
+		}
 
-        public boolean getHaveData() {
-            return haveData;
-        }
-    }
+		public boolean getHaveData() {
+			return haveData;
+		}
+	}
 
-    public void testLoadData() {
-        NotificationHandler handler = new NotificationHandler();
-        DataStore.loadData(handler);
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        assertEquals(true, handler.getHaveData());
+	public void testLoadData() {
+		NotificationHandler handler = new NotificationHandler();
+		DataStore.loadData(handler);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		assertEquals(true, handler.getHaveData());
 
-        assertEquals(false, DataStore.getRestaurants().isEmpty());
-        assertEquals(false, DataStore.getRestaurantMenus().isEmpty());
-    }
-
+		assertEquals(false, DataStore.getRestaurants().isEmpty());
+		assertEquals(false, DataStore.getRestaurantMenus().isEmpty());
+	}
 }
